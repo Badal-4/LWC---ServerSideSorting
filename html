@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Sorting Server Side" icon-name="custom:custom63">
+      <div class="slds-m-around_medium">
+        <template if:true={contacts}>
+          <lightning-datatable
+            key-field="Id"
+            data={contacts}
+            columns={columns}
+            sorted-by={sortedBy}
+            sorted-direction={sortedDirection}
+            onsort={onSort}
+          >
+          </lightning-datatable>
+        </template>
+        <template if:true={error}>
+          <!-- handle Apex error -->
+        </template>
+      </div>
+    </lightning-card>
+  </template>
